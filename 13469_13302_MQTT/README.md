@@ -20,7 +20,7 @@ Build a simple version of a *Pleurotus ostreatus* farm
 
 
 
-![mqtt](C:\Users\thien\CodeGarden\distributedsystems\13469_13302_MQTT\mqtt.png)
+![mqtt](mqtt.png)
 
 ## References
 
