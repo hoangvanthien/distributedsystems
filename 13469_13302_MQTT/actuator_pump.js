@@ -34,7 +34,7 @@ client.on('message', function(topic, message) {
 		}
 		else {
 			pump = 0
-			console.log("light set to off, pump status: " + pump)
+			console.log("pump set to off, pump status: " + pump)
 		}
 	}
 })
