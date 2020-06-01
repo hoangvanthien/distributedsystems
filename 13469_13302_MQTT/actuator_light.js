@@ -17,14 +17,24 @@ client.on('connect', function() {
 client.on('message', function(topic, message) {
 	console.log("current luminosity: " + message.toString() + " LUX")
 	if (message < lowerThreshold) {
-		light = 1
-		console.log("light set to on, light status: " + light)
+		if (light == 1) {
+			console.log("light status: " + light)
+		}
+		else {
+			light = 1
+			console.log("light set to on, light status: " + light)
+		}
 	}
 	else if (message >= lowerThreshold && message < upperThreshold) {
 		console.log("light status: " + light)
 	}
 	else {
-		light = 0
-		console.log("light set to off, light status: " + light)
+		if (light == 0) {
+			console.log("light status: " + light)
+		}
+		else {
+			light = 0
+			console.log("light set to off, light status: " + light)
+		}
 	}
 })

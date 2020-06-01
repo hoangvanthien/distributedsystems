@@ -7,6 +7,6 @@ var client = mqtt.connect('mqtt://test.mosquitto.org')
 //publish temperature data
 client.on('connect', function() {
 	setInterval(function() {
-		client.publish('13469_13302-temperature', '5')
+		client.publish('13469_13302-temperature', (5 + Math.round(Math.random() * 17)).toString())
 		}, 1000)
 })
