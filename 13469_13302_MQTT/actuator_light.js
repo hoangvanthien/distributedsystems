@@ -37,4 +37,6 @@ client.on('message', function(topic, message) {
 			console.log("light set to off, light status: " + light)
 		}
 	}
+	//publish light status
+	client.publish('13469_13302-light', light)
 })

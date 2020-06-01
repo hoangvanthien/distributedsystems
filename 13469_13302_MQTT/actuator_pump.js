@@ -37,4 +37,6 @@ client.on('message', function(topic, message) {
 			console.log("pump set to off, pump status: " + pump)
 		}
 	}
+	//publish pump status
+	client.publish('13469_13302-pump', pump)
 })

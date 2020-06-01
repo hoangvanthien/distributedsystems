@@ -37,4 +37,7 @@ client.on('message', function(topic, message) {
 			console.log("fan set to on, fan status: " + fan)
 		}
 	}
+	//publish fan status
+	client.publish('13469_13302-fan', fan)
 })
+
