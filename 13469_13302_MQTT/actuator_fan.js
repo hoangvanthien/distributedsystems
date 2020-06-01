@@ -17,24 +17,24 @@ client.on('connect', function() {
 client.on('message', function(topic, message) {
 	console.log("current temperature: " + message.toString() + " C")
 	if (message < lowerThreshold) {
-		if (fan == 1) {
-			console.log("fan status: " + fan)
-		}
-		else {
-			fan = 1
-			console.log("fan set to on, fan status: " + fan)
-		}
-	}
-	else if (message >= lowerThreshold && message < upperThreshold) {
-		console.log("fan status: " + fan)
-	}
-	else {
 		if (fan == 0) {
 			console.log("fan status: " + fan)
 		}
 		else {
 			fan = 0
 			console.log("fan set to off, fan status: " + fan)
+		}
+	}
+	else if (message >= lowerThreshold && message < upperThreshold) {
+		console.log("fan status: " + fan)
+	}
+	else {
+		if (fan == 1) {
+			console.log("fan status: " + fan)
+		}
+		else {
+			fan = 1
+			console.log("fan set to on, fan status: " + fan)
 		}
 	}
 })
