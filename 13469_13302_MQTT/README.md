@@ -22,6 +22,25 @@ Build a simple version of a *Pleurotus ostreatus* farm
 
 ![mqtt](mqtt.png)
 
+## Demo run
+
+```
+npm install
+node sensor_hygrometer.js
+node sensor_photometer.js
+node sensor_thermometer.js
+node actuator_fan.js
+node actuator_light.js
+node actuator_pump.js
+node dashboard.js
+```
+
+
+
+![image-20200601133230055](image-20200601133230055.png)
+
+
+
 ## References
 
 [1] [*Pleurotus ostreatus*](https://www.mycelia.be/en/strain-list/m-2191-pleurotus-ostreatus)
