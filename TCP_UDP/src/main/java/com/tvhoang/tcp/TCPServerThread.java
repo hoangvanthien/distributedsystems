@@ -22,16 +22,20 @@ public class TCPServerThread extends Thread {
             System.out.println("Thread ID " + getId() + " started.");
             TimeUnit.SECONDS.sleep(5);
             long startTime = System.nanoTime();
+            label:
             while (scanner.hasNextLine()) {
                 String query = scanner.nextLine();
                 System.out.println(query);
-                if (query.equals("Day")) {
-                    p.println(LocalDate.now());
-                } else if (query.equals("Time")) {
-                    p.println(LocalTime.now());
-                } else if (query.equals("Exit")) {
-                    p.println("OK Exit");
-                    break;
+                switch (query) {
+                    case "Day":
+                        p.println(LocalDate.now());
+                        break;
+                    case "Time":
+                        p.println(LocalTime.now());
+                        break;
+                    case "Exit":
+                        p.println("OK Exit");
+                        break label;
                 }
             }
         } catch (IOException | InterruptedException e) {
