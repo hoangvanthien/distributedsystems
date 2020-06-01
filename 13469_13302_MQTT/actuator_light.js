@@ -38,5 +38,5 @@ client.on('message', function(topic, message) {
 		}
 	}
 	//publish light status
-	client.publish('13469_13302-light', light)
+	client.publish('13469_13302-light', light.toString())
 })

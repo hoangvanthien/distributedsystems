@@ -38,5 +38,5 @@ client.on('message', function(topic, message) {
 		}
 	}
 	//publish pump status
-	client.publish('13469_13302-pump', pump)
+	client.publish('13469_13302-pump', pump.toString())
 })

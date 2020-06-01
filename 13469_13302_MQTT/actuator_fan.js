@@ -38,6 +38,6 @@ client.on('message', function(topic, message) {
 		}
 	}
 	//publish fan status
-	client.publish('13469_13302-fan', fan)
+	client.publish('13469_13302-fan', fan.toString())
 })
 
