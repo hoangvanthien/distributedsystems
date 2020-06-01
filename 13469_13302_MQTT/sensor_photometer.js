@@ -7,6 +7,6 @@ var client = mqtt.connect('mqtt://test.mosquitto.org')
 //publish luminosity data
 client.on('connect', function() {
 	setInterval(function() {
-		client.publish('13469_13302-luminosity', 'luminosity')
+		client.publish('13469_13302-luminosity', '800')
 		}, 1000)
 })
