@@ -1,12 +1,14 @@
-# Smart Farming
+# Smart Farm
 
 ## Overview
 
-Build a simple version of a *Pleurotus ostreatus* farm
+Build a simple version of a *Pleurotus ostreatus* smart farm
 
 ## Proposed Solution
 
 ### Conditions
+
+We identify the following conditions that will be applied to our mushroom farm. Please refer to [1] for more details.
 
 |             | min value | max value |
 | ----------- | --------- | --------- |
